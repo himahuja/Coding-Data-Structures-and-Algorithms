@@ -10,6 +10,8 @@
 #include <iostream>
 #include <stdlib.h> //for rand()
 
+// rand() generates random integer numbers
+
 #define REP(i, a, b) for (auto i = a; i < b; i++)
 
 using namespace::std;

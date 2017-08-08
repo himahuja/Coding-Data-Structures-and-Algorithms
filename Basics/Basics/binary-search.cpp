@@ -103,6 +103,16 @@ int main(){
     vanilla(arr, N, x);
     first  (arr, N, x);
     last   (arr, N, x);
+    
+    ////// USING STLs to calculate lower_bound and upper_bound //////
+    
+    auto a = lower_bound(arr, arr + N, x);
+    auto b = upper_bound(arr, arr + N, x);
+    cout<<"The number of "<<x<<"\'s are : "<<b-a<<endl;
+    
+    /// Calculate the same thing using equal_range :
+    auto r = equal_range(arr, arr+N, x);
+    cout<<"Using equal range: "<<r.second - r.first<<"\n";
 }
 
 
